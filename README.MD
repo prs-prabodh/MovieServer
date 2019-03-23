@@ -28,7 +28,7 @@ Open Django shell and use the following code:
 
 v1.0 - Designed and developed using *Angular 7*.
 
-###Features
+### Features ###
 * Components
 * Pages
 * Services
