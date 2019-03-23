@@ -2,7 +2,7 @@
 
 ## Backend ##
 
-v1.0 - Developed using *Django REST Framework*. Django RESTful backend with *SQL database*. Database contains movie and user data. Data extracted from <a href = 'https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset'>ImDB 5000 movie dataset</a>
+v1.0 - Developed using *Django REST Framework*. Django RESTful backend with *SQL database*. Database contains movie and user data. Data extracted from <a href = 'https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset'>IMDb 5000 movie dataset</a>
 
 ### Features ###
 * Models
