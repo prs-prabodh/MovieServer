@@ -1,0 +1,34 @@
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.026: Theme parsing error: gtk.css:559:1: Expected a valid selector
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.027: Theme parsing error: gtk.css:1148:2: Expected semicolon
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.028: Theme parsing error: gtk.css:1489:27: Expected a valid selector
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.028: Theme parsing error: gtk.css:1618:15: 'bborder-color' is not a valid property name
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.028: Theme parsing error: gtk.css:1622:20: Expected a valid selector
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.029: Theme parsing error: gtk.css:1988:15: 'bborder-color' is not a valid property name
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.032: Theme parsing error: gtk.css:4363:2: Expected semicolon
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.033: Theme parsing error: gtk.css:4994:2: Junk at end of value for border-radius
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.035: Theme parsing error: gtk.css:6305:26: Expected a valid selector
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.036: Theme parsing error: gtk.css:7321:26: Expected a valid selector
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.037: Theme parsing error: gtk.css:8201:64: Junk at end of value for background-image
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.037: Theme parsing error: gtk.css:8820:55: Using one color stop with linear-gradient() is deprecated.
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.037: Theme parsing error: gtk.css:8820:55: Missing closing bracket at end of linear gradient
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.038: Theme parsing error: gtk.css:8933:19: not a number
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.038: Theme parsing error: gtk.css:8951:15: 'bcbcbc' is not a valid color name
+
+(google-chrome:2171): Gtk-WARNING **: 23:16:17.039: Theme parsing error: gtk.css:10394:20: Not a valid image
+[2249:2249:0322/231622.913978:ERROR:sandbox_linux.cc(364)] InitializeSandbox() called with multiple threads in process gpu-process.
+[2171:2215:0322/234159.442529:ERROR:browser_process_sub_thread.cc(209)] Waited 653 ms for network service

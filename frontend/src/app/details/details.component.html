@@ -1,0 +1,26 @@
+<router-outlet></router-outlet>
+<app-navbar></app-navbar>
+<mat-card>
+  <mat-card-title>{{ movieName }}</mat-card-title>
+  <div fxLayout="row" fxLayout.xs="column">
+    <div fxFlex class='text-div'>
+      <img src="https://2ser.com/wp-content/themes/sf-2ser/img/2SER-hover-play_200px.png" />
+    </div>
+    <div fxFlex>
+      <mat-card-subtitle>
+        <ul>
+          <li><b>Year : </b>{{ year }}</li>
+          <li><b>Language : </b>{{ language }}</li>
+          <li><b>ImDB Rating : </b>{{ imdb_score }}</li>
+          <li><b>Genre : </b>{{ genre }}</li>
+          <li><b>Duration : </b>{{ duration }} mins</li>
+          <li><b>Director : </b>{{ director_name }}</li>
+          <li><b>Actors : </b>{{ actor_1_name }}, {{ actor_2_name }}, {{ actor_3_name }}</li>
+        </ul>
+      </mat-card-subtitle>
+    </div>
+  </div>
+  <mat-card-actions>
+    <a routerLink=""><button mat-raised-button color='primary'>Back</button></a>
+  </mat-card-actions>
+</mat-card>

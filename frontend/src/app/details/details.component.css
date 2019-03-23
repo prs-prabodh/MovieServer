@@ -1,0 +1,21 @@
+ul{
+    list-style-type: none;
+}
+img{
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
+.text-div{
+    text-align: center;
+}
+mat-card-actions{
+    text-align: center;
+    margin: 2%;
+}
+button{
+    width: 30%;
+}
+a{
+    text-decoration: none;
+}
