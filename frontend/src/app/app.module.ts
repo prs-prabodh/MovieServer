@@ -21,6 +21,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { NumberAbstracter } from './number-abstracter.pipe';
 import { MatMenuModule } from '@angular/material/menu';
+import { Spacer } from './space.pipe';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MainComponent,
     LoginRegisterComponent,
     NumberAbstracter,
+    Spacer,
   ],
   imports: [
     BrowserModule,
