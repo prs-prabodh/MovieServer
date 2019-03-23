@@ -41,7 +41,11 @@ import { MainComponent } from './main/main.component';
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+  ],
+  exports: [
+    NavbarComponent,
+    FooterComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
