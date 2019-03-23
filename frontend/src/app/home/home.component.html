@@ -12,7 +12,7 @@
 </div>
 <div *ngIf = 'searchBarVisibility == true'>
     <button mat-raised-button color = 'primary' (click) = 'flipSearchBarVisibility()'>Back</button>
-    <mat-form-field>
+    <mat-form-field appearance='standard'>
         <input autofocus (keyup)='typed($event)' id='search' name='search' type="text" matInput [formControl]="myControl"
             [matAutocomplete]="auto" placeholder="Search">
     </mat-form-field>

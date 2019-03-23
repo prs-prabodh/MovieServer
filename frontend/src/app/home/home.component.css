@@ -1,17 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Merriweather|Pacifico');
 button{
     display: block;
     width: 30%;
     margin: 1% auto;
+    font-family: 'Josefin Slab', serif;
+    font-weight: bold;
 }
 mat-card-title{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 200%;
+    font-family: 'Pacifico', cursive;
+    font-size: 300%;
     text-align: center;
+    margin: 5%;
 }
 mat-card-subtitle{
+    font-family: 'Merriweather', serif;
+    /* font-size: 200%; */
+    margin: 5%;
     text-align: center;
 }
 mat-form-field{
+    font-family: 'Josefin Slab', serif;
     text-align: center;
     width:70%;
 }
@@ -21,4 +29,7 @@ div{
 }
 .container{
     height: 100%;
+}
+a{
+    text-decoration: none;
 }

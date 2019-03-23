@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Open+Sans|Raleway');
 ul{
     list-style-type: none;
 }
@@ -9,12 +10,24 @@ img{
 .text-div{
     text-align: center;
 }
+mat-card-title{
+    font-family: 'Cinzel', serif;
+    margin: 5%;
+    font-weight: bolder;
+}
+mat-card-subtitle{
+    font-family: 'Raleway', sans-serif;
+    line-height: 180%;
+
+}
 mat-card-actions{
     text-align: center;
     margin: 2%;
 }
 button{
     width: 30%;
+    font-family: 'Josefin Slab', serif;
+    font-weight: bold;
 }
 a{
     text-decoration: none;
