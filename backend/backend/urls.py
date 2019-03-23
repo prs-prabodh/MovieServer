@@ -20,4 +20,6 @@ from movieServer.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('movies/', movie_list, name='movie_list'),
+    path('register/<name>/<username>/<password>',create_user, name='create_user'),
+    path('login/<username>/<password>', authorise, name='authorise'),
 ]

@@ -14,18 +14,23 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
 import { DetailsComponent } from './details/details.component';
 import { MainComponent } from './main/main.component';
+import { LoginRegisterComponent } from './login-register/login-register.component';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { NumberAbstracter } from './number-abstracter.pipe';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent,
     DetailsComponent,
     MainComponent,
+    LoginRegisterComponent,
+    NumberAbstracter,
   ],
   imports: [
     BrowserModule,
@@ -40,10 +45,12 @@ import { MainComponent } from './main/main.component';
     MatCardModule,
     MatButtonModule,
     FlexLayoutModule,
+    MatIconModule,
+    FormsModule,
+    MatMenuModule,
   ],
   exports: [
     NavbarComponent,
-    FooterComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

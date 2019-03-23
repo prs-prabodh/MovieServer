@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<div *ngIf='bit==0'>
+  <mat-card>
+    <mat-card-title>User login in.</mat-card-title>
+
+    <mat-card-subtitle>Do not have an account? User registration is a breeze!!</mat-card-subtitle>
+
+    <button mat-raised-button color='primary' (click)='setBit(1)'>Login</button>
+    <button mat-raised-button color='primary' (click) = 'setBit(2)'>Register</button>
+    <a routerLink="/"><button mat-raised-button color='primary'>Back</button></a>
+  </mat-card>
+</div>
+
+<div *ngIf='bit==1'>
+  <mat-card>
+    <mat-error [hidden]='!messageVisibility'>{{ messages }}</mat-error>
+
+    <mat-form-field appearance='legacy'>
+      <input autofocus matInput placeholder='Username' [(ngModel)]='username'/>
+    </mat-form-field>
+
+    <mat-form-field appearance='legacy'>
+      <input matInput placeholder='Password' type='password' [(ngModel)]='password'/>
+    </mat-form-field>
+
+    <button mat-raised-button color='primary' (click)='login()'>Login</button>
+    <button mat-raised-button color='primary' (click)='setBit(0)'>Back</button>
+  </mat-card>
+</div>
+
+<div *ngIf='bit==2'>
+  <mat-card>
+    <mat-error [hidden]='!messageVisibility'>{{ messages }}</mat-error>
+
+    <mat-form-field appearance='legacy'>
+      <input autofocus matInput placeholder='Name' [(ngModel)]='name' />
+    </mat-form-field>
+
+    <mat-form-field appearance='legacy'>
+      <input matInput placeholder='Username' [(ngModel)]='username' />
+    </mat-form-field>
+
+    <mat-form-field appearance='legacy'>
+      <input matInput placeholder='Password' type='password' [(ngModel)]='password' />
+    </mat-form-field>
+
+    <button mat-raised-button color='primary' (click)='register()'>Register</button>
+    <button mat-raised-button color='primary' (click)='setBit(0)'>Back</button>
+  </mat-card>
+</div>

@@ -13,6 +13,15 @@ class Movie(models.Model):
     imdb_score=models.CharField(max_length=5)
     year=models.CharField(max_length=5)
     language=models.CharField(max_length=50)
+    budget=models.CharField(max_length=15, default='0')
+
+    def __str__(self):
+        return self.name
+
+class User(models.Model):
+    name=models.CharField(max_length=50)
+    username=models.CharField(max_length=50)
+    password=models.CharField(max_length=50)
 
     def __str__(self):
         return self.name

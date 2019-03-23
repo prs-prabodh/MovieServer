@@ -19,6 +19,7 @@ export class DetailsComponent implements OnInit {
   private genre: string;
   private duration: string;
   private director_name: string;
+  private budget: string;
   private actor_1_name: string;
   private actor_2_name: string;
   private actor_3_name: string;
@@ -34,7 +35,8 @@ export class DetailsComponent implements OnInit {
     this.director_name = this.movieSelector.movie['director_name'];
     this.actor_1_name = this.movieSelector.movie['actor_1_name'];
     this.actor_2_name = this.movieSelector.movie['actor_2_name'];
-    this.actor_2_name = this.movieSelector.movie['actor_2_name'];
+    this.actor_3_name = this.movieSelector.movie['actor_3_name'];
+    this.budget = this.movieSelector.movie['budget'];
     
     // console.log(this.movieName);
     // console.log(JSON.parse(this.movieSelectedRaw));
