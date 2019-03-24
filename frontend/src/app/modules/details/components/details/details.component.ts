@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieSelectorService } from '../movie-selector.service';
-import { MovieFetcherService } from '../movie-fetcher.service';
-import { stringify } from '@angular/core/src/render3/util';
+import { MovieSelectorService } from '../../../../shared/services/movie-selector/movie-selector.service'
 
 @Component({
   selector: 'app-details',
@@ -10,7 +8,7 @@ import { stringify } from '@angular/core/src/render3/util';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor(private movieFetcher: MovieFetcherService ,private movieSelector: MovieSelectorService) { }
+  constructor(private movieSelector: MovieSelectorService) { }
 
   private movieName: string;
   private year: number;
@@ -24,7 +22,6 @@ export class DetailsComponent implements OnInit {
   private actor_2_name: string;
   private actor_3_name: string;
 
-  
   ngOnInit() {
     this.movieName = this.movieSelector.movie['name'];
     this.year = this.movieSelector.movie['year'];
@@ -37,10 +34,6 @@ export class DetailsComponent implements OnInit {
     this.actor_2_name = this.movieSelector.movie['actor_2_name'];
     this.actor_3_name = this.movieSelector.movie['actor_3_name'];
     this.budget = this.movieSelector.movie['budget'];
-    
-    // console.log(this.movieName);
-    // console.log(JSON.parse(this.movieSelectedRaw));
-    // console.log(JSON.parse(data)[0]['fields'])
   }
 
 }

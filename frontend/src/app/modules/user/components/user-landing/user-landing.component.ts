@@ -1,37 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { HttpHeaders } from '@angular/common/http';
-import { UserService } from '../user.service';
-
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type': 'application/json',
-    'Authorization': 'my-auth-token'
-  })
-};
+import { UserService } from '../../../../shared/services/user/user.service';
 
 @Component({
-  selector: 'app-login-register',
-  templateUrl: './login-register.component.html',
-  styleUrls: ['./login-register.component.css']
+  selector: 'app-user-landing',
+  templateUrl: './user-landing.component.html',
+  styleUrls: ['./user-landing.component.css']
 })
-export class LoginRegisterComponent implements OnInit {
+export class UserLandingComponent implements OnInit {
+
+  constructor(private http: HttpClient, private user: UserService) { }
+
   hide: boolean = true;
   bit: number = 0;
   name: string = '';
   username: string = '';
   password: string = '';
   messageVisibility: boolean = false;
-  messages: string  = '';
+  messages: string = '';
   userAuthenticated: boolean = false;
-  status:string = '';
+  status: string = '';
   loginURL: string = 'http://127.0.0.1:8000/login';
   registerURL: string = 'http://127.0.0.1:8000/register';
 
-  constructor(private http: HttpClient, private user: UserService) { }
-
   ngOnInit() {
-
   }
 
   setBit(update): void {
@@ -40,17 +32,17 @@ export class LoginRegisterComponent implements OnInit {
     this.name = '';
     this.password = '';
     this.username = '';
-    this.bit=update;
+    this.bit = update;
   }
 
   login(): void {
     console.log('angular pings');
     // this.status = this.http.get(this.loginURL + "/" + this.username + "/" + this.password)['status']
-    this.http.get(this.loginURL+"/"+this.username+"/"+this.password).subscribe(
+    this.http.get(this.loginURL + "/" + this.username + "/" + this.password).subscribe(
       data => {
-        this.status=data['status']; 
-        this.messages=data['message'];
-        this.name=data['name'];
+        this.status = data['status'];
+        this.messages = data['message'];
+        this.name = data['name'];
       },
       error => console.log(error),
       () => {
@@ -64,10 +56,10 @@ export class LoginRegisterComponent implements OnInit {
     );
   }
   register(): void {
-    this.http.get(this.registerURL+"/"+this.name+"/"+this.username+"/"+this.password).subscribe(
+    this.http.get(this.registerURL + "/" + this.name + "/" + this.username + "/" + this.password).subscribe(
       data => {
-        this.status=data['status'];
-        this.messages=data['message'];
+        this.status = data['status'];
+        this.messages = data['message'];
       },
       error => console.log(error),
       () => {
@@ -80,4 +72,5 @@ export class LoginRegisterComponent implements OnInit {
       }
     );
   }
+
 }

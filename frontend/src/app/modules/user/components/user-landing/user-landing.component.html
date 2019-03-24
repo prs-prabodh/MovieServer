@@ -6,7 +6,7 @@
     <mat-card-subtitle>Do not have an account? User registration is a breeze!!</mat-card-subtitle>
 
     <button mat-raised-button color='primary' (click)='setBit(1)'>Login</button>
-    <button mat-raised-button color='primary' (click) = 'setBit(2)'>Register</button>
+    <button mat-raised-button color='primary' (click)='setBit(2)'>Register</button>
     <a routerLink="/"><button mat-raised-button color='primary'>Back</button></a>
   </mat-card>
 </div>
@@ -16,11 +16,11 @@
     <mat-error [hidden]='!messageVisibility'>{{ messages }}</mat-error>
 
     <mat-form-field appearance='legacy'>
-      <input autocomplete='off' autofocus matInput placeholder='Username' [(ngModel)]='username'/>
+      <input autocomplete='off' autofocus matInput placeholder='Username' [(ngModel)]='username' />
     </mat-form-field>
 
     <mat-form-field appearance='legacy'>
-      <input autocomplete='off' matInput placeholder='Password' type='password' [(ngModel)]='password'/>
+      <input autocomplete='off' matInput placeholder='Password' type='password' [(ngModel)]='password' />
     </mat-form-field>
 
     <button mat-raised-button color='primary' (click)='login()'>Login</button>

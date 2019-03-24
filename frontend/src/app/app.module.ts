@@ -7,32 +7,34 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { MatInputModule } from '@angular/material';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { NavbarComponent } from './navbar/navbar.component';
-import { DetailsComponent } from './details/details.component';
-import { MainComponent } from './main/main.component';
-import { LoginRegisterComponent } from './login-register/login-register.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { DetailsComponent } from './modules/details/components/details/details.component';
+import { MainComponent } from './modules/home/pages/main/main.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-import { NumberAbstracter } from './number-abstracter.pipe';
+import { NumberAbstracter } from './shared/pipes/number-abstracter.pipe';
 import { MatMenuModule } from '@angular/material/menu';
-import { Spacer } from './space.pipe';
+import { Spacer } from './shared/pipes/space.pipe';
+import { LandingComponent } from './modules/home/components/landing/landing.component';
+import { UserMainComponent } from './modules/user/pages/user-main/user-main.component';
+import { UserLandingComponent } from './modules/user/components/user-landing/user-landing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     NavbarComponent,
     DetailsComponent,
     MainComponent,
-    LoginRegisterComponent,
     NumberAbstracter,
     Spacer,
+    LandingComponent,
+    UserMainComponent,
+    UserLandingComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,7 @@ import { Spacer } from './space.pipe';
     MatMenuModule,
   ],
   exports: [
-    NavbarComponent,
+    NavbarComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
