@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
  *   value | abstract
  * Example:
  *   {{ 20000000 | abstract }}
- *   formats to: 20 M
+ *   formats to: 20 Million USD
 */
 @Pipe({name: 'abstract'})
 export class NumberAbstracter implements PipeTransform {
