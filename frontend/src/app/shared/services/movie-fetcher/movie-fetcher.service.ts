@@ -11,6 +11,6 @@ export class MovieFetcherService {
   constructor(private http: HttpClient) { }
 
   getMovies(phrase): Observable<any>{
-    return this.http.get(this.url+'?q='+phrase);
+    return this.http.get(this.url+phrase);
   }
 }
