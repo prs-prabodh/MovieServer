@@ -16,7 +16,12 @@
           <li><b>Duration : </b>{{ duration }} mins</li>
           <li><b>Director : </b>{{ director_name }}</li>
           <li><b>Budget : </b>{{ budget | abstract }}</li>
-          <li><b>Actors : </b>{{ actor_1_name }}, {{ actor_2_name }}, {{ actor_3_name }}</li>
+          <li>
+            <b>Actors : </b>
+            <ul>
+              <li class = 'actors' *ngFor = 'let actor of actors'>{{ actor }},   </li>
+            </ul>
+          </li>
         </ul>
       </mat-card-subtitle>
     </div>

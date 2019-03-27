@@ -18,9 +18,9 @@ export class DetailsComponent implements OnInit {
   private duration: string;
   private director_name: string;
   private budget: string;
-  private actor_1_name: string;
-  private actor_2_name: string;
-  private actor_3_name: string;
+  private actors: string[];
+  // private actor_2_name: string;
+  // private actor_3_name: string;
 
   ngOnInit() {
     this.movieName = this.movieSelector.movie['name'];
@@ -30,9 +30,9 @@ export class DetailsComponent implements OnInit {
     this.genre = this.movieSelector.movie['genre'];
     this.duration = this.movieSelector.movie['duration'];
     this.director_name = this.movieSelector.movie['director_name'];
-    this.actor_1_name = this.movieSelector.movie['actor_1_name'];
-    this.actor_2_name = this.movieSelector.movie['actor_2_name'];
-    this.actor_3_name = this.movieSelector.movie['actor_3_name'];
+    this.actors = this.movieSelector.movie['actors'];
+    // this.actor_2_name = this.movieSelector.movie['actor_2_name'];
+    // this.actor_3_name = this.movieSelector.movie['actor_3_name'];
     this.budget = this.movieSelector.movie['budget'];
   }
 
