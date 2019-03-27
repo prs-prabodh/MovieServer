@@ -1,14 +1,8 @@
 const express = require('express');
 const cors = require('cors')
 const mongoose = require('mongoose');
+// const data = require('./data/jsonParsedMovieData.json');
 const app = express();
-
-app.options('/*', (req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
-    res.sendStatus(200);
-});
 
 var mongoDB = 'mongodb://127.0.0.1/movieDatabase';
 mongoose.connect(mongoDB, { useNewUrlParser: true });
@@ -19,12 +13,15 @@ var db = mongoose.connection;
 //Bind connection to error event (to get notification of connection errors)
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-const movieModel = require('./models/movie.model');
-const user = require('./models/user.model');
+// const movieModel = require('./models/movie.model');
+// movieModel.insertMany(data, function(err, res){
+//     if(err) console.log(err);
+//     else console.log('Documents imported!');
+// });
 
- const login = require('./routes/login.routes');
- const register = require('./routes/register.routes');
- const movie = require('./routes/movie.routes');
+const login = require('./routes/login.routes');
+const register = require('./routes/register.routes');
+const movie = require('./routes/movie.routes');
 
 app.use('/login', cors(), login);
 app.use('/register', cors(), register);
