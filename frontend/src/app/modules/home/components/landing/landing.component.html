@@ -19,8 +19,8 @@
 
   <mat-autocomplete #auto="matAutocomplete">
     <a routerLink='/movie'>
-      <mat-option *ngFor="let movie of results" (click)="showDetails(movie)" [value]="movie['fields']['name']">
-        {{ movie['fields']['name'] }}
+      <mat-option *ngFor="let movie of results" (click)="showDetails(movie)" [value]="movie['name']">
+        {{ movie['name'] }}
       </mat-option>
     </a>
   </mat-autocomplete>

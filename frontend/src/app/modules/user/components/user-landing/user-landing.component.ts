@@ -20,8 +20,8 @@ export class UserLandingComponent implements OnInit {
   messages: string = '';
   userAuthenticated: boolean = false;
   status: string = '';
-  loginURL: string = 'http://127.0.0.1:8000/login';
-  registerURL: string = 'http://127.0.0.1:8000/register';
+  loginURL: string = 'http://localhost:3000/login';
+  registerURL: string = 'http://localhost:3000/register';
 
   ngOnInit() {
   }
@@ -43,6 +43,7 @@ export class UserLandingComponent implements OnInit {
         this.status = data['status'];
         this.messages = data['message'];
         this.name = data['name'];
+        // console.log(this.messages, this.status, this.name);
       },
       error => console.log(error),
       () => {

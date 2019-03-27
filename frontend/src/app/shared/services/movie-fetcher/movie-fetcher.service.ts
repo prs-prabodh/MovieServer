@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class MovieFetcherService {
 
-  private url: string = 'http://127.0.0.1:8000/movies/';
+  private url: string = 'http://localhost:3000/movies/';
   constructor(private http: HttpClient) { }
 
   getMovies(phrase): Observable<any>{

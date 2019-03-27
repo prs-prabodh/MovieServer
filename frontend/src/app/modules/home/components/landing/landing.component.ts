@@ -22,7 +22,7 @@ export class LandingComponent implements OnInit {
 
   typed(event): void {
     this.movieFetcher.getMovies(event.target.value).subscribe(
-      data => this.results = JSON.parse(data),
+      data => {this.results = data; console.log(this.results)},
       error => console.log('Error!')
     );
     // console.log(typeof event.target.value);
@@ -33,6 +33,6 @@ export class LandingComponent implements OnInit {
     this.searchBarVisibility = this.searchBarVisibility ? false : true;
   }
   showDetails(movie) {
-    this.movieSelector.movie = movie['fields'];
+    this.movieSelector.movie = movie;
   }
 }
